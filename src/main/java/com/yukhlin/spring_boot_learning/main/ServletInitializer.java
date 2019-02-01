@@ -1,4 +1,4 @@
-package com.yukhlin.spring_boot_learning;
+package com.yukhlin.spring_boot_learning.main;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
