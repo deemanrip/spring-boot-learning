@@ -1,6 +1,6 @@
 package com.yukhlin.spring_boot_learning.controller;
 
-import com.yukhlin.spring_boot_learning.model.Topic;
+import com.yukhlin.spring_boot_learning.entity.Topic;
 import com.yukhlin.spring_boot_learning.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,12 +24,12 @@ public class TopicController {
 
     @RequestMapping(value = "/topics", method = RequestMethod.POST)
     public void addTopic(@RequestBody Topic topic) {
-        topicService.addTopic(topic);
+        topicService.saveOrUpdateTopic(topic);
     }
 
-    @RequestMapping(value = "/topics/{id}", method = RequestMethod.PUT)
-    public void updateTopic(@PathVariable String id, @RequestBody Topic topic) {
-        topicService.updateTopic(id, topic);
+    @RequestMapping(value = "/topics", method = RequestMethod.PUT)
+    public void updateTopic(@RequestBody Topic topic) {
+        topicService.saveOrUpdateTopic(topic);
     }
 
     @RequestMapping(value = "/topics/{id}", method = RequestMethod.DELETE)

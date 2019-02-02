@@ -1,7 +1,12 @@
-package com.yukhlin.spring_boot_learning.model;
+package com.yukhlin.spring_boot_learning.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Topic {
 
+    @Id
     private String id;
     private String name;
     private String description;
